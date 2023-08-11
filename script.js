@@ -125,3 +125,89 @@
 //     console.log(a);
 // }
 // console.log(a);
+
+
+// Function
+
+// function printHello(){
+//     console.log('Hello');
+// }
+
+// let printHello = function(msg='default'){
+//     console.log(msg);
+//     console.log(`This is msg : ${msg}`);
+// }
+// printHello('Hello 1234')
+// printHello()
+
+
+// Arrow Functions
+
+// let printHello = msg=> `This is ${msg}`;
+
+// console.log(printHello('Nitin'));
+
+// Higher order function
+
+// let uppercase = function(str){
+// return str.toUpperCase()
+// }
+
+// let lowercase = function(str){
+//     return str.toLowerCase()
+//     }
+
+// // This is a HOF (Higer order function)
+// let transform = function(str, fun){
+//     return fun(str)
+// }
+
+// console.log(transform('Hello Nitin', lowercase));
+
+// let compliment = function(msg){
+//     return function(name){
+//         console.log(msg,name);
+//     }
+// }
+
+// compliment('This is ')('Nitin');
+
+// IIFE
+
+// (function(name){
+//     console.log('I am iify', name);
+// })('Nitin')
+
+// setTimeout & setInterval
+
+// setTimeout(()=>{
+//     console.log('I am running');
+// },0)
+
+// setTimeout(function(name, name2){
+//     console.log('I am running 2', name, name2);
+// },3000, 'Nitin', 'Mahesh')
+
+// setInterval(function(name, name2){
+// console.log('I am running', name, name2);
+// },1000, 'Nitin','Gouri')
+
+// Hoisting
+
+// a = 10
+// console.log(a);
+// let a;
+
+// msg()
+// function msg(){
+//     console.log('Hi this is hoisting function');
+// }
+
+// msg()
+// msg1()
+// let msg = ()=>{
+//     console.log('Hi this is not hoisting function');
+// }
+// let msg1 = function(){
+//     console.log('Hi this is not hoisting function');
+// }
