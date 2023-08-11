@@ -211,3 +211,128 @@
 // let msg1 = function(){
 //     console.log('Hi this is not hoisting function');
 // }
+
+// objects 
+
+// let obj = {
+//     color:"red"
+// }
+
+// console.log(obj);
+// console.log(obj.color);
+// console.log(obj['color']);
+
+// obj.color = 'Yellow'
+// obj.model = 'Honda'
+// console.log(obj);
+// let value = delete obj.color
+
+// console.log(obj);
+// console.log(value);
+// let age = {
+//     agenum:30,
+//     agecalculate:function(){
+//         console.log(this.agenum);
+//         console.log('AGE');
+//         return true
+//     }
+// }
+
+// console.log(age.agecalculate());
+
+
+// let dishes = ['Biryani','Roti','Chawal','Daal']
+
+// dishes.forEach(function(value, index){
+//     console.log(value, index);
+
+// })
+
+// console.log(Math.trunc(2.66));
+// console.log(Math.round(Math.random() * 100));
+
+
+// Call apply bind
+// "use strict"
+// let restro = {
+//     restro_name:'Kake di hatti',
+//     location: 'Mansarover, jaipur',
+//     food:'Daal or Roti',
+//     orders:[],
+//     book:function(username){
+//         console.log(`${username} has ordered ${this.food} from ${this.restro_name
+//         }, ${this.location} `);
+//         this.orders.push({restro:`${ this.restro_name}`, username:`${username}`})
+//     }
+
+// }
+// console.log(restro);
+// restro.book('Nitin')
+// restro.book('Gouri')
+
+// let otherrestro = {
+//     restro_name:'Mama parathe wale',
+//     location: 'Mansarover, jaipur',
+//     food:'Daal or Roti',
+//     orders:[],
+// }
+// let bookorder = restro.book
+
+// // bookorder('Sandeep')
+// bookorder.call(otherrestro,'sandeep')
+
+// console.log(otherrestro);
+
+// bookorder.call(otherrestro, 'Yuvraj singh')
+
+// bookorder.apply(otherrestro,['suresh'])
+
+// function greet(){
+//     console.log(`Welcome ${this.fname} ${this.lname}`);
+// }
+
+// let user = { 
+//     fname: 'Nitin',
+//     lname: 'Singh'
+// }
+
+// let greet1 = greet.bind(user)
+// greet1()
+
+// let arr1 = [10,20,30,40,50]
+
+// let arr2 = arr1;
+
+// console.log(arr1);
+// console.log(arr2);
+// console.log(arr1.length);
+// console.log(arr2.length);
+// arr2[6] = 50
+
+// console.log(arr1);
+// console.log(arr2);
+// console.log(arr1.length);
+// console.log(arr2.length);
+
+
+// let arr3 = [... arr1]  // copy separate
+// arr3[95]= 51
+// arr3.shift()
+// console.log(arr3);
+// console.log(arr3.length);
+ 
+
+// for in loop
+
+// let obj = {
+//     fname:'Nitin',
+//     lname:'Singh',
+//     address: 'Jaipur'
+
+// }
+
+// console.log(obj);
+
+// for(let key in obj){
+//     console.log(key, obj[key]);
+// }
