@@ -336,3 +336,101 @@
 // for(let key in obj){
 //     console.log(key, obj[key]);
 // }
+
+// javascript DOM
+
+// console.log(document.URL);
+// let resultElement = document.querySelectorAll('p')
+// console.log(resultElement); // returns Nodelist
+
+// let a = document.querySelectorAll('.secondh2')
+// console.log(a);
+
+// let a = document.querySelector('#heading3')
+// console.log(a);
+// console.dir(a);
+
+// console.log(document.getElementsByTagName('p'));
+
+// let heading = document.querySelector('.content')
+// heading.innerText += "This is new content"
+// console.log(heading.innerText);
+// heading.innerHTML += "<br/><h4>New heading content</h4>"
+// console.log(heading.innerHTML);
+
+// let googlelink = document.querySelector('a')
+// console.log(googlelink.getAttribute('href'));
+
+// googlelink.setAttribute('href','http://www.facebook.com')
+
+// let heading = document.querySelector('h1')
+// heading.style.color = '#FF0000'
+// heading.style.backgroundColor = '#000'
+
+// heading.classList.add('nitinnewclass')
+// // heading.classList.remove('nitinnewclass')
+
+// heading.classList.replace('nitinnewclass','nitin123')
+
+// let parentelement = document.querySelector('.content')
+// console.log(parentelement.children);
+
+// Array.from(parentelement.children).forEach(function(value){
+// value.classList.add('Test')
+// })
+// console.log(Array.from(parentelement.children));
+
+// let childelement = document.querySelector('h2')
+// console.log(childelement.parentElement);
+
+// console.log(childelement.nextElementSibling);
+// console.log(childelement.previousElementSibling);
+
+
+// Events
+
+// const ul = document.querySelector('ul')
+// ul.addEventListener('click',()=>{
+//     console.log('Inside UL');
+// })
+
+let clickElement = document.querySelector('.clickMe')
+console.log(clickElement);
+
+clickElement.addEventListener('click', function(){
+    let li = document.createElement('li')
+    li.textContent = "Something new"
+    ul.append(li)
+})
+
+
+
+// let elements = document.querySelectorAll('li')
+// console.log(elements);
+
+// elements.forEach(function(element){
+// element.addEventListener('click', (e)=>{
+//     console.log('click on item');
+//     console.log(e.target);
+//     e.target.style.textDecoration = 'line-through'
+//     e.target.remove()
+// })
+// })
+
+
+// Event Bubbling & Deligation
+
+// let elements = document.querySelectorAll('li')
+// elements.forEach(function(element){
+// element.addEventListener('click', (e)=>{
+//     console.log('click on item');
+//     console.log(e.target);
+//     e.target.style.textDecoration = 'line-through'
+// })
+// })
+
+// const ul = document.querySelector('ul')
+// ul.addEventListener('click',(e)=>{
+//     console.log('Inside UL');
+//     console.log(e.target);
+// })
