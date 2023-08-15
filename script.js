@@ -507,3 +507,128 @@ clickElement.addEventListener('click', function(){
 
 // console.log(sum);
 
+
+// find method
+// let students =[{
+//     id: 1,
+//     name: 'nitin'
+// },{
+//     id: 2,
+//     name: 'raja'
+// }]
+
+// let results = students.find((student)=>{
+//     return student.id == 1
+// })
+// console.log(results);
+
+
+// let students =[{
+//     id: 1,
+//     name: 'nitin'
+// },{
+//     id: 2,
+//     name: 'raja'
+// }]
+
+// let results = students.findIndex((student)=>{
+//     return student.id == 2
+// })
+// console.log(results);
+
+
+// let scored = [10,20,30,40,50]
+// let result = scored.some((score)=>{
+//     return score > 20
+// })
+// console.log(result);
+
+
+// let scored = [10,20,30,40,50]
+// let result = scored.every((score)=>{
+//     return score > 5
+// })
+// console.log(result);
+
+// let arr = [1,2,3,[4,5,6,[7,8,9,[10,11,12]]]]
+// console.log(arr);
+// let result = arr.flat(3) // 3 is a deep level
+// console.log(result);
+
+// let cart = [{
+//     name:'Mobile Phone',
+//     qty:2,
+//     price:500
+// },{
+//     name:'Tablet',
+//     qty:1,
+//     price:1000
+// }]
+
+// let newcart = cart.flatMap((item)=>{
+//     if(item.name == 'Mobile Phone'){
+//         return [item, {name:'screen guard', price:0, qty:1}]
+//     }else{
+//         return [item]
+//     }
+
+// })
+
+// console.log(newcart);
+
+// Sorting Array
+
+// let letters = ['a','b','r','s','o']
+
+// console.log(letters.sort());
+// let nums = [1,2,3,4,5,2,87,9,-1,-65]
+// console.log(nums.sort());
+
+// nums.sort((a,b)=>{
+// return b-a  // Descending sort
+// })
+// console.log(nums);
+
+// let num = [1,2,3,4,5,6]
+// let results = num.slice(0,3).splice(2,1,7)
+// console.log(results);
+// console.log(num);
+
+// Date object
+
+
+// let currentdate = new Date(2023,7,15);
+// console.log(currentdate);
+
+
+// let currentdate = new Date().getTime();
+// console.log(currentdate);
+
+
+// let currentdate = new Date();
+// console.log(currentdate);
+
+// console.log(currentdate.getFullYear());
+// console.log(currentdate.getMonth());
+// console.log(currentdate.getHours());
+// console.log(currentdate.getDay());
+// console.log(currentdate.getMinutes());
+// console.log(currentdate.getDate());
+// console.log(currentdate.getSeconds());
+
+// localStorage
+
+// localStorage.setItem('testval','Nitin')
+// localStorage.setItem('age',33)
+// console.log(localStorage);
+
+// console.log(localStorage.getItem('age'));
+
+// localStorage.setItem('testval','Ram')
+
+// console.log(localStorage);
+
+// localStorage.removeItem('testval')
+// console.log(localStorage);
+
+// localStorage.clear()
