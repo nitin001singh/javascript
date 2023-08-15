@@ -434,3 +434,76 @@ clickElement.addEventListener('click', function(){
 //     console.log('Inside UL');
 //     console.log(e.target);
 // })
+
+// Forms  & events
+
+// Array & Methods
+
+// let letters = ['a','b','c','d']
+
+// letters.reverse()
+// console.log(letters);
+
+// let nums = [1,2,3,4]
+// let concat = nums.concat(letters)
+// console.log(concat);
+// console.log(...nums, ...letters);
+
+// let stringa = letters.join('-')
+// console.log(stringa);
+// console.log(typeof stringa);
+// console.log(...letters);
+
+// let num = [1,2,3,4,5,6,7,8,9]
+
+// let extracted = num.slice(1,3)
+// console.log(extracted);
+
+// let num = [1,2,3,4,5,6]
+// let newval = num.splice(1,1,10,20)
+// console.log(newval);
+// console.log(num);
+
+// let newval = num.splice(-2)
+// console.log(num);
+
+
+// console.log(num.at(4));
+// console.log(num.at(-1));
+// console.log(num.slice(-1));
+
+// let name = "Nitin"
+// console.log(name.at(0));
+
+// Higher order funciton 
+
+// map method
+
+// let salary = [1000,2000,3000,4000,5000]
+// let newsal = salary.map((sal)=>{
+//     let incsal = sal/2
+//     return sal + incsal
+// })
+
+// console.log(newsal);
+
+// Filter method
+
+// let gifts = ['watch','ring','aa','bb']
+// let filteredarr = gifts.filter((g)=>{
+//     if(g == 'watch' || g == 'ring'){
+//         return g
+//     }
+// })
+// console.log(gifts);
+// console.log(filteredarr);
+
+// Reduce method
+
+// let nums = [1,2,3,4,5]
+// let sum = nums.reduce((total, n)=>{
+// return total * n
+// },1)
+
+// console.log(sum);
+
