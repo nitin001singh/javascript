@@ -394,14 +394,14 @@
 //     console.log('Inside UL');
 // })
 
-let clickElement = document.querySelector('.clickMe')
-console.log(clickElement);
+// let clickElement = document.querySelector('.clickMe')
+// console.log(clickElement);
 
-clickElement.addEventListener('click', function(){
-    let li = document.createElement('li')
-    li.textContent = "Something new"
-    ul.append(li)
-})
+// clickElement.addEventListener('click', function(){
+//     let li = document.createElement('li')
+//     li.textContent = "Something new"
+//     ul.append(li)
+// })
 
 
 
@@ -704,3 +704,82 @@ clickElement.addEventListener('click', function(){
 
 // honda.breakMethod()
 
+// Class & Getter & Setter 
+
+
+
+// class Car{
+//     constructor(color, model){
+//         this.color = color
+//         this.model = model
+//     }
+
+//     startEngien(){
+//         console.log('Engine started');
+//     }
+
+//     get _startEngine(){
+//         console.log('This is start engine method getter');
+//     }
+
+//     set changeColor(color){
+//         console.log('Color has changed to', color);
+//     }
+
+//     get description(){
+//         return `Color of bike is ${this.color} and the model is ${this.model}`
+//     }
+// }
+
+// let honda = new Car('Red',2022)
+// honda.startEngien()
+// honda._startEngine
+// honda.changeColor = "Blue"
+// console.log(honda.description);
+
+// // static method
+
+// Car.break = function(){
+//     console.log('Car method');
+// }
+
+// Car.break()
+
+// inheritance
+
+// class Bike extends Car{
+//     constructor(color, model,engine){
+//         super(color, model)
+//         this.engine = engine
+
+//     }
+//     bikeMethod(){
+//         console.log('This is bike method of bike class');
+//     }
+// }
+
+// let newbike = new Bike('Black', 2023,'150CC')
+// let newbike1 = new Bike('White', 2023,'200CC')
+
+// console.log(newbike);
+// console.log(newbike.__proto__);
+
+// console.log(newbike1);
+
+// let Bikeold = function(color, model,engine){
+//     Car.call(this, color, model)
+
+// }
+// let bike1 = new Bikeold('green',2023,'250cc')
+
+// console.log(bike1);
+// function Person(name){
+//     this.name = name
+// }
+// Person.prototype.printName = function(){
+//     console.log('Name is ', this.name);
+// }
+
+// const person = new Person('Nitin')
+// console.log(person);
+// console.log(person.printName());
