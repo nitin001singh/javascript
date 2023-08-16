@@ -616,7 +616,7 @@ clickElement.addEventListener('click', function(){
 // console.log(currentdate.getDate());
 // console.log(currentdate.getSeconds());
 
-// localStorage
+// localStorage  & Session storage
 
 // localStorage.setItem('testval','Nitin')
 // localStorage.setItem('age',33)
@@ -632,3 +632,75 @@ clickElement.addEventListener('click', function(){
 // console.log(localStorage);
 
 // localStorage.clear()
+
+
+// Oops in JS
+
+// Constructor function
+// let Car = function(color, model){
+// // console.log(this);
+// this.color = color;
+// this.model = model;
+// // this.login = function(){
+// //     console.log('Login done');
+// // }
+// }
+
+// let result = new Car('Red','Virtus');
+// console.log(result);
+// let result1 = new Car('Blue','Slavia');
+// console.log(result1);
+
+
+// console.log(result instanceof Car) 
+
+// // console.log(result1.login());
+
+// Car.prototype.company= "Honda"
+
+// console.log(Car.prototype);
+
+// Car.prototype.startEngine = function(){
+//     console.log('Car Started');
+// }
+
+
+// console.log(Car.prototype);
+
+// result1.startEngine()
+
+// console.log(result1.__proto__) 
+// console.log(result1.__proto__.isPrototypeOf(result1)); // true
+// console.log(Car.prototype.isPrototypeOf(Car)); //false
+
+// let arr = [1,2,3,4,5,6]
+// console.log(arr.__proto__, Array.prototype);
+
+// console.log(arr.__proto__.__proto__); // prototype chaining
+
+// console.log(Object.prototype);
+
+// class Car{
+//     constructor(color, model){
+//         this.color = color
+//         this.model = model
+
+//     }
+//     startEngine(){
+//         console.log('Engine started');
+//     }
+// }
+
+// let honda = new Car('Red',2023)
+
+// console.log(honda);
+// honda.startEngine()
+
+// Car.prototype.breakMethod = function(){
+//     console.log('Break pushed');
+// }
+
+// console.log(honda.__proto__.isPrototypeOf(honda));
+
+// honda.breakMethod()
+
