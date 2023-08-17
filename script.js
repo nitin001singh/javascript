@@ -783,3 +783,136 @@
 // const person = new Person('Nitin')
 // console.log(person);
 // console.log(person.printName());
+
+
+// Async/Await
+
+// console.log('Hi');
+// console.log('Hello');
+// setTimeout(() => {
+//     console.log('Inside settimeout');
+// }, 1000);
+// console.log('Outside timeout');
+
+// let todos = (resource, callback)=>{
+//     let request = new XMLHttpRequest()
+//     // console.log(request);
+    
+//     request.addEventListener('readystatechange',()=>{
+//         if(request.readyState === 4 && request.status == 200){
+//             let data = JSON.parse(request.responseText)
+//             callback(undefined,data)
+//         }else if(request.readyState === 4){
+//             callback('Data could not be fetched', undefined)
+//         }
+//     })
+    
+//     request.open('get',resource)
+//     request.send()
+// }
+
+// console.log(1);
+
+// console.log(2);
+// todos('data.json',(error,data)=>{
+//     if(error){
+//         console.log(error);
+//     }else{
+//         console.log(data);
+//     }
+// })
+// console.log(3);
+// console.log(4);
+
+
+// Promise 
+
+// let getsomething = ()=>{
+//     return new Promise((resolve, reject)=>{
+//         // resolve('some data goes here')
+//         reject('some error goes here')
+//     })
+// }
+
+// getsomething().then((succ)=>{
+//     console.log(succ);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+
+// let todos = (resource, callback)=>{
+
+//     return  new Promise((resolve, reject)=>{
+//         let request = new XMLHttpRequest()      
+//         request.addEventListener('readystatechange',()=>{
+//             if(request.readyState === 4 && request.status == 200){
+//                 let data = JSON.parse(request.responseText)
+//                 // callback(undefined,data)
+//                 resolve(data)
+//             }else if(request.readyState === 4){
+//                 // callback('Data could not be fetched', undefined)
+//                 reject('Throw error')
+
+//             }
+//         })
+        
+//         request.open('get',resource)
+//         request.send()
+//     })  
+// }
+// // Promise chaining
+// todos('data.json').then((succ)=>{
+//     console.log(succ);
+//     return todos('data1.json')
+// }).then((data)=>{
+//     console.log(data);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+// Fetch APi
+
+// fetch('data.json').then((res)=>{
+//     return res.json()
+// }).then((data)=>{
+// console.log(data);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+// let getTodos = async()=>{
+//     let response = await fetch('data.json')
+//     // custom error
+
+//     if(response.status !== 200){
+//         throw new Error('Custom Error in fetching the data')
+//     }
+
+//     let data = await response.json()
+//     return data
+// }
+
+// console.log('2');
+// let test= getTodos().then((data)=>{
+//     console.log(data);
+// }).catch((err)=>{
+//     console.log(err);
+// });
+// console.log(3);
+
+// try{
+//     let x = 4;
+//     const y =6;
+//     y = x
+//     console.log(x+y);
+// }catch(err){
+// console.log(err);
+// }
+
+
+
+
+
+
+ 
