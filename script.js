@@ -910,9 +910,224 @@
 // console.log(err);
 // }
 
+// Ecma Script  ES6
 
 
+// let hotel = {
+//     name:'Nitin hotel',
+//     location:'Jaipur',
+//     categories:['Chinese','Italian','English']
+// }
+
+// let items = [1,2,3,4]
+// let [a,b,c,d] = items
+// console.log(a,b,c,d);
 
 
+// let [first,, third] = hotel.categories
+// console.log(first, third);
 
+// let temp = first
+// first = third,
+// third = temp
+// console.log(first,third);
+
+// [third, first] = [first, third]
+// console.log(first, third);
  
+// let nums = [2,3,[6,9]]
+// // let [a,,c] = nums
+// let [a,,[b,c]] = nums
+// console.log(a,b,c);
+
+// let hotel = {
+//     name:'Nitin hotel',
+//     Location:'Delhi',
+//     categories:['Chinese','Italian','English'],
+//     openhour:{
+//         sunday:{open:'9AM', close:'11 PM'},
+//         monday:{open:'9AM', close:'11 PM'},
+//         tuesday:{open:'9AM', close:'11 PM'},
+//     }
+// }
+ 
+// let {name,categories,Location} = hotel
+
+// console.log(name, Location, categories);
+
+
+//Customize name in object destructuring
+// let {name:hotelName, Location:hotelLocation, cat:hotelCategory} = hotel
+// console.log(hotelName, hotelLocation, hotelCategory);
+
+// setting default value
+// let {name,Location="jaipur",categories=[]} = hotel
+// console.log(name, Location, categories);
+
+// let {name, openhour} = hotel
+
+// let {sunday, monday} = openhour
+// console.log(name, openhour);
+// console.log(sunday, monday);
+
+
+// spread operator
+
+// let nums = [1,2,33,4]
+// console.log(...nums);
+
+// let newArr = [9,10,...nums]
+// console.log(newArr);
+
+// let mainmenu = [...hotel.categories, 'Japanese','Indian']
+// console.log(mainmenu);
+
+// // join 2 array
+
+// let joinarr = [...nums, ...newArr]
+// console.log(joinarr);
+
+// let passion = 'Programming'
+// console.log(...passion);
+
+// Rest operator
+
+// let nums = [1,2,3,4,5,6]
+// let [a,b,...rest] = nums
+
+// console.log(a,b, ...rest);
+
+// let {sunday, ...weekday} = hotel.openhour
+// console.log(sunday, weekday);
+
+// Short circuiting
+
+// let result = 10 &&  null && undefined
+// console.log(result);
+
+// let result = 10 &&  0 && 30
+// console.log(result);
+
+// let result = 0 || null || undefined || 8
+// console.log(result);
+
+
+// Nullish Coalising operator
+
+// let num = undefined
+// let result = num || 10
+// console.log(result);
+
+//  // if num is null or undefined then it shows right sidre value otherwise left side 
+
+// let result2 = num ?? 10 
+// console.log(result2);
+
+// let result2 = null ?? 'Good'
+// console.log(result2);
+
+// For in get index value while for of get value
+// let test = [10,20,30,40]  // Will work
+// // let test = {     // Not work
+// //     name:'Nitin',
+// //     address:'jaipur'
+// // }
+
+// console.log(test.entries());
+// for(let [index,value] of test.entries()){
+//     console.log(index,value);
+// }
+
+// Enhanced object literals
+
+// let openhour = {
+//     sunday:{open:'9AM', close:'11 PM'},
+//     monday:{open:'9AM', close:'11 PM'},
+//     tuesday:{open:'9AM', close:'11 PM'},
+// }
+// let menuType = "Golden"
+// let hotel = {
+//     name:'Nitin hotel',
+//     Location:'Delhi',
+//     categories:['Chinese','Italian','English'],
+//     openhour,
+//     order:function(){
+
+//     },
+//     order_latest_es6(){
+
+//     },
+//     [menuType]:['Food items']   
+// }
+
+// console.log(hotel);
+
+// // optional chaining
+
+// console.log(hotel.openhour?.saturday?.open);
+
+
+// // Get keys & values 
+// let allkeys = Object.keys(openhour)
+// console.log(allkeys);
+
+// let allvalues = Object.values(openhour)
+// console.log(allvalues);
+
+// let allentry = Object.entries(openhour)
+// console.log(allentry);
+
+// for(let [index, value] of allentry){
+// console.log(index, value);
+// }
+
+
+
+// Set
+
+// let nums = [1,2,3,4,1,2,57,51,2,24]
+// console.log(nums);
+// let numset = new Set(nums);
+// console.log(numset);  // Unique value
+// console.log(numset.size);
+// console.log(numset.has(3));
+// console.log(numset.add(9));
+// console.log(numset.delete(57));
+// console.log(numset);
+// // console.log(numset[2]);  // not allwed ,  error
+
+// for(let num of numset.entries()){
+//     console.log(num);
+// }
+
+// numset.clear()
+
+// console.log(numset);
+
+// let str = new Set('Programmer')
+// console.log(str);
+// console.log(str.size); //  unique character count
+
+
+// Map
+
+// let numMap = new Map()
+// numMap.set('name','Taj1')
+// numMap.set(5,'Taj2')
+// numMap.set(new Date(),'Taj3')
+// numMap.set(true,'Taj4')
+// numMap.set(null,'Taj5')
+// numMap.set(undefined,'Taj6')
+// numMap.set(false,'Taj7')
+
+// numMap.set([1,2],[5,6])
+
+// console.log(numMap);
+// console.log(numMap.get(null));
+// console.log(numMap.size);
+
+// console.log(numMap[1,2]); // error
+
+// let arr = [10,20]
+// numMap.set(arr, "Good Night")
+// console.log(numMap[arr]);
