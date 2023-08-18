@@ -1131,3 +1131,85 @@
 // let arr = [10,20]
 // numMap.set(arr, "Good Night")
 // console.log(numMap[arr]);
+
+
+
+// Misc Tools
+
+// Named Export
+
+// import * as single from './Product.js'
+// // import {order, firstvalue,b as secondval} from "./Product.js"
+// console.log('Importing module');
+
+// console.log(single);
+
+// single.order('Nitin','Laptop');
+// console.log(single.firstvalue,single.b);
+
+
+
+// Default Export
+
+// import anyName from './Product.js'
+// anyName('Nitin','Bike');
+
+
+// Top Level Await
+
+// console.log('Starting');
+// let getTodos = async ()=>{
+//     let response = await fetch("data.json")
+//     let data = await response.json()
+//     console.log(data);
+// }
+// getTodos()
+
+// console.log('End');
+
+// Module Pattern
+
+//IIFE
+// let result = (function(name){
+//     let orders = [];
+//     console.log('I am iify '+name);
+//     let addCard = function(product, quantity){
+//         orders.push({product, quantity})
+//     }
+//     return { orders, addCard}
+// })('Nitin')
+
+// result.addCard('Burger',4)
+// result.addCard('Mobile',5);
+// console.log(result.orders);
+
+// console.log('Testing NPM');
+// console.log('Welcome Nitin');
+// console.log('How are you? I am nodemon');
+
+// Closure
+
+// let outerFunction = function(param){
+//     let outerVar = 10;
+//     let innerFunction = function(){
+//         console.log('I am inner function');
+//         console.log(outerVar);
+//         console.log(param);
+//     }
+//     return innerFunction
+// }
+// let innerf = outerFunction('OuterVar')
+
+// innerf();
+
+// let counter = function(){
+//     let count = 1
+//     let innerCount = function(){
+//         return count = count * 2
+//     }
+//     return innerCount
+// }
+
+// let res= counter()
+// console.log(res());
+// console.log(res());
