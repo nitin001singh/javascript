@@ -1,0 +1,1 @@
+Basics of Javascript with including concepts of Closure & ES6
