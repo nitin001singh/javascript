@@ -1213,3 +1213,678 @@
 // let res= counter()
 // console.log(res());
 // console.log(res());
+
+
+// -----------------------------------
+// Advance Topics 
+
+// Temporal Dead zone
+
+
+// let a = 100;
+
+// {
+//     console.log(a);   // TDZ
+//     let a= 1;
+// }
+
+
+// Varibale Shadowing
+// let x= 100;
+// {
+//     let x = 51;
+//     console.log(x);
+// }
+
+
+// Hoisting
+// y = 10
+// console.log(y);
+// var y ;
+
+
+// say()
+// function say(){
+//     console.log('Say Hi');
+// }
+
+// say();  // error
+// let say =  ()=>{
+//     console.log('Say Hi');
+// }
+
+
+
+// for(let i=0; i<=10; i++){   // 0.....10
+//     setTimeout(()=>{
+//         console.log(i);
+//     }, 1000)
+// }
+
+
+// for(var i=0; i<=10; i++){  // 11
+//     setTimeout(()=>{
+//         console.log(i);
+//     }, 1000)
+// }
+
+
+// module scope    + test.js
+// let a = 50;
+// console.log(a);
+
+// Global object 
+
+// window.nitin = 100;  
+// var nitin = 'Nitin singh'
+
+
+// function say(){
+//     console.log('Say hi');
+// }
+
+
+// Closure
+
+// function initCounter(){
+//     let count = 0;
+//     return function(){
+//         count++;
+//         console.log(count);
+//     }
+// }
+
+// let counter =  initCounter()
+// counter()
+// counter()
+
+// let counter1 = initCounter()
+// counter1()
+// counter1()
+
+// Currying
+
+// function sum(a){
+//     return function(b){
+//         return function(c){
+//            return a+b+c
+//         }
+//     }
+// }
+
+
+// let res = sum(1)(2)(3)
+// console.log(res);
+
+// let sumval = a=>b=>c=>a+b+c
+// console.log(sumval(1)(2)(3));
+
+// let log = time => type => msg => `At ${time.toISOString()} : ${type}: severity ${msg}`
+
+// console.log(log(new Date())('error')('power not sufficient'))
+
+
+// Shallow Copy
+
+// let p = {name:'nitin'}
+// let q = Object.assign({},p)
+// console.log(q);
+
+// let addressobject = {city: 'jaipur', state:'rajasthan'}
+
+// let p1 = {name:'nitin', address:addressobject}
+// let q1 = Object.assign({},p1)
+
+// q1.name = 'mohit'
+// q1.address.city = "Y"
+// console.log(p1);
+// console.log(q1);
+
+
+// let addressobject = {city: 'jaipur', state:'rajasthan'}
+
+// let p1 = {name:'nitin', address:addressobject}
+// let q1 = {...p1}
+
+// q1.name = 'mohit'
+// q1.address.city = "Y"
+// console.log(p1);
+// console.log(q1);
+
+
+// Deep Copy
+
+// let addressobject = {city: 'jaipur', state:'rajasthan'}
+
+// let p1 = {name:'nitin', address:addressobject}
+// let q1 = JSON.parse(JSON.stringify(p1))
+// q1.name = 'Ronit'
+// q1.address.city = "delhi"
+
+// console.log(p1);
+// console.log(q1);
+
+// let addressobject = {city: 'jaipur', state:'rajasthan'}
+
+// let p1 = {name:'nitin', address:addressobject}
+
+// let q1 = structuredClone(p1)
+// q1.address.city = 'delhi'
+// console.log(p1,q1);
+
+// This keyword
+
+// function sayHi(){
+//     return 'Hi ' + this.name
+// }
+
+// console.log(sayHi())
+
+// this is not present in arrow functtion
+
+// Symbol data type
+
+// const id = Symbol('id')
+// const idx = Symbol('id')
+// let p = {
+//     name : 'nitin',
+//     [id]: 1,
+//     [idx]: 2
+// } 
+
+// console.log(p[id], p[idx]);
+
+
+// Functions
+
+// function sayHi(name){
+//     return name
+// }
+
+
+// sayHi('Nitin')
+// sayHi.name
+
+// sayHi.x = 1;
+// console.log(sayHi.x)
+
+
+// Function constructor
+
+// function Person(name){
+//     this.name = name
+// }
+
+// const p = new Person('Nitin')
+// console.log(p);
+
+
+// Named Function expression
+
+// let sayHello = function fx(user){
+//     if(user){
+//         return "Hello "+user
+//     }else{
+//         return fx('Anonymous')
+//     }
+// }
+
+// let sayHi = sayHello
+// sayHello = null
+// console.log(sayHi())
+
+
+// Decorator 
+
+// function heavy(x){
+//     console.log(x + ": Heavy");
+//     return x + ": heavy"
+// }
+
+// // heavy(4)     // Normal Call
+
+// function memoizer(fx){
+//     let map = new Map(); // Hashmap
+
+//     return function(x){
+//         if(map.has(x)){
+//            return map.get(x) 
+//         }else{
+//             let result = fx(x);
+//             map.set(x,result)
+//             return result
+//         }
+//     }
+// }
+
+
+// let memoizedHeavy = memoizer(heavy)
+
+// memoizedHeavy(4)
+// memoizedHeavy(3)
+// memoizedHeavy(5)
+// memoizedHeavy(5)
+
+
+
+// Call method 
+
+// let person = {
+//     name: 'Nitin',
+//     age:12,
+//     location: 'Jaipur'
+// }
+
+// function checkName(a,b){
+//     console.log(a,b);
+//     return !!this.name
+// }
+
+// // person.check = checkName
+// // console.log(person.check()); // Error
+
+// console.log(checkName.call(person,1,2));
+
+// // Apply Method
+
+// console.log(checkName.apply(person,[3,4]));
+
+// // Bind Method
+
+// let bindedmethod = checkName.bind(person,9,78)
+// console.log(bindedmethod);
+// console.log(bindedmethod());
+
+// Debounce
+
+
+// let count =1;
+// function showCount(){
+//     count++;
+//     console.log(count);
+// }
+
+// function debounce(fx, time){
+//     let id = null;
+//     return function(x){
+//         if(id){
+//             clearTimeout(id);
+//         }
+//         id = setTimeout(()=>{
+//             fx();
+//             id = null
+//         }, time,x)
+//     }
+// }
+
+// let showCountD = debounce(showCount,1000)
+
+// setTimeout(showCountD, 1000)
+// setTimeout(showCountD, 2200)
+// setTimeout(showCountD, 2500)
+// setTimeout(showCountD, 5000)
+
+
+
+// Throttling
+
+// let count =1;
+// function showCount(x){
+//     count++;
+//     console.log(count, x);
+// }
+
+// function throttle(fx, time){
+//     let id = null;
+//     let args = [];
+//     return function(x){
+//         if(!id){
+//             id = setTimeout(()=>{
+//                 fx(args[args.length-1]);
+//                 id = null
+//             }, time)
+//         }
+//         args.push(x)
+
+//     }
+// }
+
+// let showCountT = throttle(showCount,1500)
+
+// setTimeout(showCountT, 1000,1)
+// setTimeout(showCountT, 2200,2)
+// setTimeout(showCountT, 3500,3)
+// setTimeout(showCountT, 5000,4)
+
+// Iterator
+
+// iterable[Symbol.iterator]() => Iterator;
+
+// let iterator = {
+//     i: 0,
+//     next:function(){
+//         return {value:this.i, done:this.i++ > 5}
+//     }
+// }
+
+// let iterable = {
+//     name:'Nitin',
+//     age:20,
+//     [Symbol.iterator](){
+//         return iterator
+//     }
+// }
+
+
+// let range = {
+//     start :0,
+//     end:5,
+//     [Symbol.iterator](){
+//         let that = this;
+//         let i = this.start;
+//         return {
+//             next:function(){
+//                 return {value:i, done:i++ > that.end}
+//             }
+//         }
+//     }
+// }
+
+// for(let r of range){
+//     console.log(r);
+// }
+
+// console.log([... range]);
+
+// let num = [1,2,3,4,5]
+// let it = num[Symbol.iterator]()
+// console.log(it.next());
+// console.log(it.next());
+// console.log(it.next());
+// console.log(it.next());
+// console.log(it.next());
+// console.log(it.next());
+
+// let arrlike = {
+//     'a':0,
+//     'b':5,
+//     'length':2
+// }
+// // arrlike = Array.from(arrlike)
+// for(let k of arrlike){
+//     console.log(k);
+// }
+
+// Convert object to Map
+
+// let obj = {a:1, b:2, c:3}
+// let map = new Map(Object.entries(obj))
+// console.log(map);
+
+
+// // convert map to object
+// let obj1 = Object.fromEntries(map)
+// console.log(obj1);
+
+// WeakMap and Weakset
+
+// let weakMap = new WeakMap()   // Memory optimized
+// let person = {name:'john'}
+// weakMap.set(person, {...person});
+// person = null  
+
+// Generators
+
+// function* generatorFunciton(){
+//     yield 1;
+//     yield 2;
+//     yield 3;
+// }
+
+// let gobj = generatorFunciton();
+// // console.log(gobj.next());
+// // console.log(gobj.next());
+// // console.log(gobj.next());
+// // console.log(gobj.next());
+
+// console.log([...gobj]);
+
+// function *range(start, end){
+
+//     for(let value=start; value<=end; value++){
+//         yield value;
+//     }
+
+    
+// }
+
+// for(let r of range(0,5)){
+//     console.log(r);
+// }
+
+
+// Nested Generator  // Generator composition
+
+// function *range(start, end){
+
+//     for(let value=start; value<=end; value++){
+//         yield value;
+//     }
+
+    
+// }
+// function *multiRange(){
+//     yield *range(0,5)
+//     yield *range(100,105)
+//     yield *range(200,205)
+// }
+
+// let generator = multiRange();
+
+// console.log([... generator]);
+
+
+// Prototypical Inheritance
+
+// let animal = {eats: true,
+//     walks:function(){
+//         console.log('walks');
+//     }
+// }
+// let dog = {barks: true}
+// let mydog = {name:'Rocky'}
+// dog.__proto__ = animal;
+// mydog.__proto__=dog
+
+// console.log(dog.barks);
+// console.log(dog.eats);
+// dog.walks()
+// mydog.walks()
+
+// mydog.walks = function(){
+//     console.log('Walking slowly');
+// }
+
+// mydog.walks()
+// dog.walks()
+
+// for(let key in dog){
+//     console.log('------');
+//     console.log(Object.hasOwn(dog,key));
+//     console.log(dog.hasOwnProperty(key));
+//     console.log(key);
+// }
+
+
+// function User(name){
+//     this.name = name
+// }
+
+// User.prototype.sayHi = function(){
+//     return this.name
+// }
+
+// User.prototype.reverseName = function(){
+//     return this.name.split('').reverse().join('');
+// }
+
+// let user = new User('john')
+// let user1 = new User('wick')
+
+// console.log(user.sayHi());
+// console.log(user1.sayHi());
+
+
+// console.log(user.reverseName());
+// console.log(user1.reverseName());
+
+
+
+// Classes
+
+
+// class User {
+//     constructor(name){
+//         this.name = name
+//     }
+
+//     sayHi(){
+//         return this.name
+//     }
+// }
+
+// User.prototype.sayHello = function(){
+//     return this.name
+// }
+// let user = new User('John')
+
+// console.log(user.sayHi());
+// console.log(user.sayHello());
+
+// Async Javascript
+
+// console.log(1);
+// setTimeout(console.log, 1000, 3)
+// console.log(2);
+
+
+// // Callback
+
+// function sum(a,b){
+//     console.log(a,b);
+//     return a+b
+// }
+// let asyncFx = (a,b,cb)=>setTimeout(()=>cb(sum(a,b)), 3000)
+
+// console.log(asyncFx(2,5, function(result){
+//     console.log(result);
+// }));
+
+// Promise 
+
+function sum(a,b){
+    return a+b
+}
+let asyncFx = (a,b)=>
+new Promise((resolve, reject)=>{
+
+    setTimeout(
+        ()=>{
+            let res = sum(a,b)
+            if(res > 10){
+                resolve(res)
+            }else{
+                reject('Sum is less than 10. Value is '+ res)
+            }
+        },
+     3000)
+})
+
+
+
+// asyncFx(2,15).then(function(data){
+//     console.log(data);
+//     return asyncFx(10,data)
+// }).then(function(data1){
+//         console.log(data1);
+// }).catch(function(err){
+//     console.log(err);
+// }).finally(()=>{
+//     console.log('Finally');
+// })
+
+
+// Promise APIs
+
+Promise.all([asyncFx(10,20), asyncFx(20,20), asyncFx(25,25)]).then(function(data){
+console.log(data);
+}).catch(function(err){
+    console.log(err);
+})
+
+// Return all wheter resolved or reject
+Promise.allSettled([asyncFx(10,20), asyncFx(20,20), asyncFx(-25,25)]).then(function(data){
+    console.log(data);
+}).catch(function(err){
+    console.log(err);
+})
+
+// Race among all return won one
+Promise.race([asyncFx(10,20), asyncFx(20,20), asyncFx(25,25)]).then(function(data){
+    console.log(data);
+}).catch(function(err){
+    console.log(err);
+})
+
+// First successfull
+Promise.any([asyncFx(10,-20), asyncFx(20,-20), asyncFx(25,25)]).then(function(data){
+    console.log(data);
+}).catch(function(err){
+    console.log(err);
+})
+
+// let p = asyncFx(10,20).resolve()
+// console.log(p);
+
+// let q = asyncFx(10,20).reject()
+// console.log(q);
+
+// -------------------------
+// asyncFx(10,20).then(function(data){
+//     console.log(data);
+//     return asyncFx(10,data)
+// })
+
+// asyncFx(20,20).then(function(data){
+//     console.log(data);
+//     return asyncFx(10,data)
+// })
+
+// asyncFx(25,25).then(function(data){
+//     console.log(data);
+//     return asyncFx(10,data)
+// })
+
+
+
+// async function test(){
+//     try{
+//         console.time();
+//         // let data = await asyncFx(2,15);
+//         // let data2 = await asyncFx(12,15);
+//         let pres = await Promise.all( [asyncFx(2,15),asyncFx(12,15) ])
+
+//         // console.log('Result is ', data);
+//         // console.log('Result is ', data2);
+//         console.log('Result is ', pres);
+
+//         console.timeEnd()
+
+
+//         // return data
+//     }catch(err){
+//         console.log(err);
+//     }
+// }
+
+// test()
